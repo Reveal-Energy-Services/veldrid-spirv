@@ -16,6 +16,8 @@
     <Copyright>Copyright 2019 (c) Eric Mellino. All rights reserved.</Copyright>
     <Authors>Eric Mellino</Authors>
     <RepositoryUrl>https://github.com/TechPizzaDev/veldrid-spirv</RepositoryUrl>
+    <!-- Reveal fork: published to our feed under distinct IDs so they never collide with nuget.org Veldrid. -->
+    <PackageId>Reveal.$(MSBuildProjectName)</PackageId>
   </PropertyGroup>
 
 
