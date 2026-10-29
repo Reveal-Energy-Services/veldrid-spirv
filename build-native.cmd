@@ -31,7 +31,8 @@ if defined _NDK_DIR (
   set _OS_DIR=android
   set _BUILD_ARCH=%_ANDROID_ABI%
 ) else (
-  set _CMAKE_ARGS=%_CMAKE_ARGS% -DCMAKE_GENERATOR_PLATFORM=%_CMAKE_GENERATOR_PLATFORM%
+  rem Static C runtime: the DLL then depends only on KERNEL32 (no VC++ redistributable needed).
+  set _CMAKE_ARGS=%_CMAKE_ARGS% -DCMAKE_GENERATOR_PLATFORM=%_CMAKE_GENERATOR_PLATFORM% -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
   set _OS_DIR=win
 )
 
